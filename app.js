@@ -14,6 +14,9 @@ const PORT = process.env.PORT||3000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+//template engine
+app.set("view engine","ejs")
+
 
 //serve files express
 app.use(express.static(path.join(__dirname, "public")));
